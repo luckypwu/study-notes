@@ -1,0 +1,1985 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E7%AC%AC2%E7%AB%A0%20Android%E5%B8%B8%E8%A7%81%E7%95%8C%E9%9D%A2%E5%B8%83%E5%B1%80/">
+      
+      
+        <link rel="next" href="../%E7%AC%AC4%E7%AB%A0%20%E7%A8%8B%E5%BA%8F%E6%B4%BB%E5%8A%A8%E5%8D%95%E5%85%83Activity/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>第3章 Android常见界面控件 - 思悟行者学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-android" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="思悟行者学习笔记" class="md-header__button md-logo" aria-label="思悟行者学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            思悟行者学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第3章 Android常见界面控件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E7%9B%AE%E5%BD%95/" class="md-tabs__link">
+          
+  
+  Android
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../OneDriveNotes/" class="md-tabs__link">
+        
+  
+    
+  
+  OneDrive
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Git/git/" class="md-tabs__link">
+        
+  
+    
+  
+  Git
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Python/Python-IDE/" class="md-tabs__link">
+          
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/mkdocs/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="思悟行者学习笔记" class="md-nav__button md-logo" aria-label="思悟行者学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
+
+    </a>
+    思悟行者学习笔记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%9B%AE%E5%BD%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC1%E7%AB%A0%20Android%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第1章 Android基础入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC2%E7%AB%A0%20Android%E5%B8%B8%E8%A7%81%E7%95%8C%E9%9D%A2%E5%B8%83%E5%B1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第2章 Android常见界面布局
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第3章 Android常见界面控件
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第3章 Android常见界面控件
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 简单控件的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 简单控件的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-textviewview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 TextView控件（继承自View控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-edittexttextview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 EditText控件（继承自TextView控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-button-textview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 Button 控件（继承自TextView控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-imageview-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 ImageView 控件（继承自View控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 RadioButton 控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 CheckBox控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-toast" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.7 Toast类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 列表控件的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 列表控件的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-listview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 ListView 控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-recyclerview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 RecyclerView控件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC4%E7%AB%A0%20%E7%A8%8B%E5%BA%8F%E6%B4%BB%E5%8A%A8%E5%8D%95%E5%85%83Activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第4章 程序活动单元Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC5%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第5章 数据存储
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OneDriveNotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OneDrive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../Python/Python-IDE/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../about/mkdocs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 简单控件的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 简单控件的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-textviewview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 TextView控件（继承自View控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-edittexttextview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 EditText控件（继承自TextView控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-button-textview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 Button 控件（继承自TextView控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-imageview-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 ImageView 控件（继承自View控件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 RadioButton 控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 CheckBox控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-toast" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.7 Toast类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 列表控件的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 列表控件的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-listview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 ListView 控件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-recyclerview" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 RecyclerView控件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3-android">第3章 Android常见界面控件<a class="headerlink" href="#3-android" title="Permanent link">&para;</a></h1>
+<h2 id="31">3.1 简单控件的使用<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="311-textviewview">3.1.1 TextView控件（继承自View控件）<a class="headerlink" href="#311-textviewview" title="Permanent link">&para;</a></h3>
+<h4 id="3111">3.1.1.1 常用属性<a class="headerlink" href="#3111" title="Permanent link">&para;</a></h4>
+<ol>
+<li>android:lines和android:maxLines的区别</li>
+</ol>
+<p>当文本实际内容小于android:lines设置的行数时，TextView控件的高度为android:lines设置行数；当文本实际内容小于android:maxLines设置的行数时，TextView控件的高度以实际行数为准。</p>
+<p>当文本实际内容大于设置的行数时，这两个属性表现一致。</p>
+<p><img alt="image-20240303190822472" src="../assets/image-chapter03-001.png" /></p>
+<ol>
+<li>android:drawableLeft  在文本左侧显示指定图像</li>
+</ol>
+<p><img alt="image-20240304144735608" src="../assets/image-chapter03-002.png" /></p>
+<ol>
+<li>android:lineSpacingExtra 设置文本的额外行间距</li>
+</ol>
+<p><img alt="image-20240304144852687" src="../assets/image-chapter03-003.png" /></p>
+<h4 id="3112">3.1.1.2 使用案例<a class="headerlink" href="#3112" title="Permanent link">&para;</a></h4>
+<p>（1）新建子项目 TextView</p>
+<p>（2）新建布局文件 textview_layout.xml</p>
+<p>（3）在布局文件中放置TextView控件，设置其中的文本的文字大小、颜色、位置和字体。</p>
+<p>（4）在Java文件中加载该布局文件，并运行程序。</p>
+<p><img alt="image-20240304145015576" src="../assets/image-chapter03-004.png" /></p>
+<p>参考资料：</p>
+<ol>
+<li><a href="https://blog.csdn.net/liqian321/article/details/48519349">在Android Studio的drawable文件下创建XML文件-CSDN博客</a></li>
+<li><a href="https://www.cnblogs.com/zoro-zero/p/12621050.html">Android 对控件设置边框样式（边框颜色，圆角）和图片样式（圆角） - 博客园</a></li>
+<li><a href="https://blog.csdn.net/a87b01c14/article/details/49363955">android:layout_gravity和android:gravity的可选值详解-CSDN博客</a></li>
+</ol>
+<h3 id="312-edittexttextview">3.1.2 EditText控件（继承自TextView控件）<a class="headerlink" href="#312-edittexttextview" title="Permanent link">&para;</a></h3>
+<h4 id="3121">3.1.2.1 常用属性<a class="headerlink" href="#3121" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>功能描述</th>
+<th>替代属性名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>android:hint</td>
+<td>控件中内容为空时显示的提示文本信息</td>
+<td></td>
+</tr>
+<tr>
+<td>android:textColorHint</td>
+<td>控件中内容为空时显示的提示文本信息的颜色</td>
+<td></td>
+</tr>
+<tr>
+<td><del>android:password</del></td>
+<td>输入文本框中的内容显示为“.”</td>
+<td>android:inputType="textPassword"</td>
+</tr>
+<tr>
+<td><del>android:phoneNumber</del></td>
+<td>设置输入文本框中的内容只能是数字</td>
+<td>android:inputType="phone"</td>
+</tr>
+<tr>
+<td>android:minLines</td>
+<td>设置文本的最小行数</td>
+<td></td>
+</tr>
+<tr>
+<td>android:scrollHorizontally</td>
+<td>设置文本信息超出EditText的宽度情况下，是否出现横拉条</td>
+<td></td>
+</tr>
+<tr>
+<td><del>android:editable</del></td>
+<td>设置是否可编辑</td>
+<td>android:focusable="false"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3122">3.1.2.2 使用案例<a class="headerlink" href="#3122" title="Permanent link">&para;</a></h4>
+<p>（1）新建子项目 EditText。</p>
+<p>（2）新建布局文件 edittext_layout.xml。</p>
+<p>（3）在布局文件中放置一个 TextView 控件和一个 EditText  控件，设置 EditText 控件中提示文本颜色为灰色，设置 EditText 控件中显示的文本颜色为红色。</p>
+<p>（4）在Java文件中加载该布局文件，并运行程序。</p>
+<p><img alt="" src="../assets/image-chapter03-005.png" /></p>
+<h3 id="313-button-textview">3.1.3 Button 控件（继承自TextView控件）<a class="headerlink" href="#313-button-textview" title="Permanent link">&para;</a></h3>
+<p>Button 控件继承自 TextView 控件，既可以显示文本，又可以显示图片。</p>
+<h4 id="3131-button">3.1.3.1 Button 控件设置点击事件的三种相应方式<a class="headerlink" href="#3131-button" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在布局文件中指定 onClick 属性的值。</li>
+</ol>
+<p>布局文件代码如下：</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">android:id=</span><span class="s">&quot;@+id/btn_1&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">        </span><span class="na">android:onClick=</span><span class="s">&quot;click&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>在avtivity中实现点击事件的java代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">click</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">view</span><span class="p">){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="c1">// 实现点击事件的代码</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="c1">// 获取触发点击事件控件的方法有两种。</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="c1">// 方法一：Button btn = (Button)view;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">    </span><span class="c1">// 方法二：在onCreate()方法中通过findViewById()方法获取</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos="6 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>注意：java代码中实现点击事件的方法名必须与onClick属性中指定的方法名相同。</p>
+<ol>
+<li>在Activity中使用匿名内部类。</li>
+</ol>
+<p>具体的java代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">btn</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">(){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onClick</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="c1">// 实现点击事件的代码</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos="7 "></span></a><span class="p">});</span>
+</code></pre></div>
+<p>监听到Button控件被点击时，程序会调用匿名内部类中的onClick()方法。</p>
+<ol>
+<li>使用 Activity 实现 <strong>View.OnClickListener</strong> 接口。</li>
+</ol>
+<p>具体的java代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">        </span><span class="c1">// btn为触发点击事件的控件</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">        </span><span class="n">btn</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onClick</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><a href="#__codelineno-3-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="c1">// 实现点击事件的代码</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><a href="#__codelineno-3-13"><span class="linenos" data-linenos="13 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>快速生成实现接口中方法的代码：在接口名称上右键，选择【Generate...】→【Implement methods...】。</p>
+<h4 id="3132">3.1.3.2 使用案例<a class="headerlink" href="#3132" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>新建子项目 Button。</p>
+</li>
+<li>
+<p>新建布局文件 button_layout.xml，放置3个 Button 控件。</p>
+</li>
+</ol>
+<p>button_layout.xml的具体代码如下：</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="nt">&lt;LinearLayout</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="nt">&lt;Button</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/btn_1&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="na">android:text=</span><span class="s">&quot;按钮1&quot;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="na">android:onClick=</span><span class="s">&quot;click&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><a href="#__codelineno-4-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="nt">&lt;Button</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><a href="#__codelineno-4-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/btn_2&quot;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><a href="#__codelineno-4-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><a href="#__codelineno-4-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><a href="#__codelineno-4-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="na">android:text=</span><span class="s">&quot;按钮2&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><a href="#__codelineno-4-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="nt">&lt;Button</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><a href="#__codelineno-4-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/btn_3&quot;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><a href="#__codelineno-4-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><a href="#__codelineno-4-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><a href="#__codelineno-4-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">        </span><span class="na">android:text=</span><span class="s">&quot;按钮3&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><a href="#__codelineno-4-22"><span class="linenos" data-linenos="22 "></span></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><a href="#__codelineno-4-23"><span class="linenos" data-linenos="23 "></span></a><span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>
+<p>界面效果图如下图所示：</p>
+<p><img alt="image-20240305123050779" src="../assets/image-chapter03-006.png" /></p>
+<ol>
+<li>Java代码中加载button_layout.xml布局文件，并实现点击事件，点击每个按钮时打印相应的日志信息。</li>
+</ol>
+<p>MainActivity.java 中的具体代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">package</span><span class="w"> </span><span class="nn">cn.itcast.button</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.app.AppCompatActivity</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.util.Log</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.View</span><span class="p">;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.Button</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><a href="#__codelineno-5-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><a href="#__codelineno-5-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><a href="#__codelineno-5-10"><span class="linenos" data-linenos="10 "></span></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><a href="#__codelineno-5-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">btn_1</span><span class="p">,</span><span class="w"> </span><span class="n">btn_2</span><span class="p">,</span><span class="w"> </span><span class="n">btn_3</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><a href="#__codelineno-5-12"><span class="linenos" data-linenos="12 "></span></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><a href="#__codelineno-5-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><a href="#__codelineno-5-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><a href="#__codelineno-5-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><a href="#__codelineno-5-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="c1">// 加载button_layout布局</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><a href="#__codelineno-5-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">button_layout</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><a href="#__codelineno-5-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="n">btn_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">btn_1</span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><a href="#__codelineno-5-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="n">btn_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">btn_2</span><span class="p">);</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><a href="#__codelineno-5-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">        </span><span class="n">btn_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">btn_3</span><span class="p">);</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><a href="#__codelineno-5-21"><span class="linenos" data-linenos="21 "></span></a>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><a href="#__codelineno-5-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">        </span><span class="c1">// 实现按钮2的点击事件</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><a href="#__codelineno-5-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">        </span><span class="n">btn_2</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">OnClickListener</span><span class="p">(){</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><a href="#__codelineno-5-24"><span class="linenos" data-linenos="24 "></span></a>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><a href="#__codelineno-5-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">            </span><span class="nd">@Override</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><a href="#__codelineno-5-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">            </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onClick</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><a href="#__codelineno-5-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">                </span><span class="n">btn_2</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;按钮2已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><a href="#__codelineno-5-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">                </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;按钮2已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><a href="#__codelineno-5-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><a href="#__codelineno-5-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><a href="#__codelineno-5-31"><span class="linenos" data-linenos="31 "></span></a>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><a href="#__codelineno-5-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">        </span><span class="c1">// 实现按钮3的点击事件</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><a href="#__codelineno-5-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">        </span><span class="n">btn_3</span><span class="p">.</span><span class="na">setOnClickListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><a href="#__codelineno-5-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><a href="#__codelineno-5-35"><span class="linenos" data-linenos="35 "></span></a>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><a href="#__codelineno-5-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="c1">// 实现按钮1的点击事件</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><a href="#__codelineno-5-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">click</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">view</span><span class="p">){</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><a href="#__codelineno-5-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">        </span><span class="n">btn_1</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;按钮1已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><a href="#__codelineno-5-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;按钮1已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a><a href="#__codelineno-5-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a><a href="#__codelineno-5-41"><span class="linenos" data-linenos="41 "></span></a>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><a href="#__codelineno-5-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">    </span><span class="c1">// 实现按钮3的点击事件</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><a href="#__codelineno-5-43"><span class="linenos" data-linenos="43 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a><a href="#__codelineno-5-44"><span class="linenos" data-linenos="44 "></span></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onClick</span><span class="p">(</span><span class="n">View</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a><a href="#__codelineno-5-45"><span class="linenos" data-linenos="45 "></span></a><span class="w">        </span><span class="n">btn_3</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;按钮3已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a><a href="#__codelineno-5-46"><span class="linenos" data-linenos="46 "></span></a><span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;按钮3已被点击&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a><a href="#__codelineno-5-47"><span class="linenos" data-linenos="47 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a><a href="#__codelineno-5-48"><span class="linenos" data-linenos="48 "></span></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>运行程序。</li>
+</ol>
+<p>程序运行结果图如下：</p>
+<p><img alt="image-20240305123937623" src="../assets/image-chapter03-007.png" /></p>
+<p>运行程序后，使用日志过滤器过滤出标签为MainActivity的日志信息，日志窗口结果如下：</p>
+<p><img alt="image-chapter03-008" src="../assets/image-chapter03-008.png" /></p>
+<h3 id="314-imageview-view">3.1.4 ImageView 控件（继承自View控件）<a class="headerlink" href="#314-imageview-view" title="Permanent link">&para;</a></h3>
+<h4 id="3141">3.1.4.1 常用属性<a class="headerlink" href="#3141" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>功能描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>android:src</td>
+<td>设置 ImageView 控件需要显示的图片资源</td>
+<td></td>
+</tr>
+<tr>
+<td>android:background</td>
+<td>设置 ImageView 控件的背景</td>
+<td>图片会根据控件的大小进行伸缩</td>
+</tr>
+<tr>
+<td>android:scaleType</td>
+<td>将图片资源缩放或移动，以适应ImageView控件的宽高  <br />可选值：center、centerCrop、centerInside、<strong>fitCenter</strong>（默认值）、fitEnd、fitStart、fitXY、matrix</td>
+<td><a href="https://www.jianshu.com/p/32e335d5b842">Android ImageView 的scaleType 属性图解 - 简书</a></td>
+</tr>
+<tr>
+<td>android:tint</td>
+<td>将图片渲染成指定的颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>android:contentDescription</td>
+<td>图片内容描述信息</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="3142">3.1.4.2 使用案例<a class="headerlink" href="#3142" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>新建模块 ImageView</p>
+</li>
+<li>
+<p>新建布局文件imageview.xml</p>
+</li>
+<li>
+<p>在布局文件中添加 ImageView 控件</p>
+</li>
+</ol>
+<p><img alt="image-20240305144602222" src="../assets/image-chapter03-009.png" /></p>
+<ol>
+<li>在 activity 中加载 imageview.xml 布局文件，并运行程序。</li>
+</ol>
+<h3 id="315-radiobutton">3.1.5 RadioButton 控件<a class="headerlink" href="#315-radiobutton" title="Permanent link">&para;</a></h3>
+<h4 id="3151">3.1.5.1 使用语法<a class="headerlink" href="#3151" title="Permanent link">&para;</a></h4>
+<p>RadioButton是单选按钮，通常放在RadioGroup中使用。通过android:check属性指定选中状态。</p>
+<p>RadioButton继承自Button控件；RadioGroup继承自LinearLayout，可以通过orientation属性设置其中的RadioButton的布局方向。</p>
+<p>XML中使用RadioButton和RadioGroup的语法：</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">&lt;RadioGroup</span><span class="w"> </span><span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="nt">&lt;RadioButton</span><span class="w"> </span><span class="na">android:checked=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nt">&lt;RadioButton</span><span class="w"> </span><span class="na">android:checked=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a><span class="nt">&lt;/RadioGroup&gt;</span>
+</code></pre></div>
+<h4 id="3152">3.1.5.2 使用案例<a class="headerlink" href="#3152" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>创建模块 RadioButton</p>
+</li>
+<li>
+<p>新建布局文件 radiobutton_layout.xml，布局文件根标记修改为RelativeLayout，在该布局中放置界面控件。</p>
+</li>
+</ol>
+<p><img alt="" src="../assets/image-chapter03-010.png" /></p>
+<ol>
+<li>设置 RadioGroup 的监听事件，点击单选按钮时在日志中打印相应的文本内容。</li>
+</ol>
+<p>（1）获取RadioGroup控件对象。
+   （2）设置RadioGroup监听事件。
+   （3）实现点击事件。</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">package</span><span class="w"> </span><span class="nn">cn.itcast.radiobutton</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.app.AppCompatActivity</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.util.Log</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><a href="#__codelineno-7-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.Button</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.RadioButton</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><a href="#__codelineno-7-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.RadioGroup</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><a href="#__codelineno-7-9"><span class="linenos" data-linenos=" 9 "></span></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><a href="#__codelineno-7-10"><span class="linenos" data-linenos="10 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><a href="#__codelineno-7-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><a href="#__codelineno-7-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><a href="#__codelineno-7-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><a href="#__codelineno-7-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="c1">// 加载 radiobutton_layout 布局</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><a href="#__codelineno-7-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">radiobutton_layout</span><span class="p">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><a href="#__codelineno-7-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="n">RadioGroup</span><span class="w"> </span><span class="n">radioGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">rg</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><a href="#__codelineno-7-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="c1">// 实现 RadioGroup 的监听事件</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><a href="#__codelineno-7-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="n">radioGroup</span><span class="p">.</span><span class="na">setOnCheckedChangeListener</span><span class="p">(</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><a href="#__codelineno-7-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">RadioGroup</span><span class="p">.</span><span class="na">OnCheckedChangeListener</span><span class="p">(){</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><a href="#__codelineno-7-20"><span class="linenos" data-linenos="20 "></span></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><a href="#__codelineno-7-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">                    </span><span class="nd">@Override</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><a href="#__codelineno-7-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">                    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCheckedChanged</span><span class="p">(</span><span class="n">RadioGroup</span><span class="w"> </span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">checkedId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><a href="#__codelineno-7-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">                        </span><span class="n">Button</span><span class="w"> </span><span class="n">btn</span><span class="p">;</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><a href="#__codelineno-7-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">checkedId</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">rbtn_1</span><span class="p">){</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><a href="#__codelineno-7-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">                            </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">rbtn_1</span><span class="p">);</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><a href="#__codelineno-7-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">                            </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;您选择的性别是&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">btn</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><a href="#__codelineno-7-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">                        </span><span class="p">}</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><a href="#__codelineno-7-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">                        </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><a href="#__codelineno-7-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">                            </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">rbtn_2</span><span class="p">);</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><a href="#__codelineno-7-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">                            </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;您选择的性别是&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">btn</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><a href="#__codelineno-7-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">                        </span><span class="p">}</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><a href="#__codelineno-7-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><a href="#__codelineno-7-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a><a href="#__codelineno-7-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">        </span><span class="p">);</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a><a href="#__codelineno-7-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a><a href="#__codelineno-7-36"><span class="linenos" data-linenos="36 "></span></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>运行程序。</li>
+</ol>
+<p>点击界面上”女“对应的单选按钮，日志窗口中会打印出被选中的按钮对应的文本信息。</p>
+<p><img alt="image-20240305154441415" src="../assets/image-chapter03-011.png" /></p>
+<h3 id="316-checkbox">3.1.6 CheckBox控件<a class="headerlink" href="#316-checkbox" title="Permanent link">&para;</a></h3>
+<h4 id="3161">3.1.6.1 控件介绍<a class="headerlink" href="#3161" title="Permanent link">&para;</a></h4>
+<p>CheckBox是复选框按钮，继承自抽象类CompoundButton，CompoundButton类继承自Button类。</p>
+<p>复选框的选中的状态也是通过 android:checked 属性指定的。</p>
+<h4 id="3162">3.1.6.2 使用案例<a class="headerlink" href="#3162" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>新建模块 Checkbox</p>
+</li>
+<li>
+<p>新建布局文件 checkbox.xml，根标记修改为LinearLayout，在该布局文件中放置1个TextView控件和3个CheckBox控件。</p>
+</li>
+</ol>
+<p><img alt="image-20240306093613953" src="../assets/image-chapter03-012.png" /></p>
+<ol>
+<li>在Activity中通过实现CompoundButton.OnCheckedChangeListener接口，并重写onCheckedChanged方法，实现CheckBox控件的点击事件。</li>
+</ol>
+<p>点击复选框时，在日志中打印所有选中的复选框中的文本内容。</p>
+<p>（1） 获取3个CheckBox控件对象
+   （2）让MainActivity类实现CompoundButton.OnCheckChangeListener接口
+   （3）设置CheckBox控件的点击事件
+   （4）重写OnCheckedChanged()方法，在该方法中实现CheckBox控件的点击事件</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">package</span><span class="w"> </span><span class="nn">cn.itcast.checkbox</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.app.AppCompatActivity</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><a href="#__codelineno-8-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.util.Log</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><a href="#__codelineno-8-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.CheckBox</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><a href="#__codelineno-8-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.CompoundButton</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><a href="#__codelineno-8-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><a href="#__codelineno-8-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="c1">// MainActivity类实现CompoundButton.OnCheckChangeListener接口</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><a href="#__codelineno-8-10"><span class="linenos" data-linenos="10 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">CompoundButton</span><span class="p">.</span><span class="na">OnCheckedChangeListener</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><a href="#__codelineno-8-11"><span class="linenos" data-linenos="11 "></span></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><a href="#__codelineno-8-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">hobbys</span><span class="p">;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><a href="#__codelineno-8-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><a href="#__codelineno-8-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><a href="#__codelineno-8-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><a href="#__codelineno-8-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">checkbox_layout</span><span class="p">);</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><a href="#__codelineno-8-17"><span class="linenos" data-linenos="17 "></span></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><a href="#__codelineno-8-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="c1">// 获取3个CheckBox控件对象</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><a href="#__codelineno-8-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="n">CheckBox</span><span class="w"> </span><span class="n">cb_badminton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">cb_badminton</span><span class="p">);</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><a href="#__codelineno-8-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">        </span><span class="n">CheckBox</span><span class="w"> </span><span class="n">cb_basketball</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">cb_basketball</span><span class="p">);</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><a href="#__codelineno-8-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">        </span><span class="n">CheckBox</span><span class="w"> </span><span class="n">cb_pingpong</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">cb_pingpong</span><span class="p">);</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><a href="#__codelineno-8-22"><span class="linenos" data-linenos="22 "></span></a>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><a href="#__codelineno-8-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">        </span><span class="c1">// 设置CheckBox控件的点击事件</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><a href="#__codelineno-8-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">        </span><span class="n">cb_badminton</span><span class="p">.</span><span class="na">setOnCheckedChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><a href="#__codelineno-8-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">        </span><span class="n">cb_basketball</span><span class="p">.</span><span class="na">setOnCheckedChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><a href="#__codelineno-8-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">        </span><span class="n">cb_pingpong</span><span class="p">.</span><span class="na">setOnCheckedChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><a href="#__codelineno-8-27"><span class="linenos" data-linenos="27 "></span></a>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><a href="#__codelineno-8-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">        </span><span class="n">hobbys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">();</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><a href="#__codelineno-8-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><a href="#__codelineno-8-30"><span class="linenos" data-linenos="30 "></span></a>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><a href="#__codelineno-8-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><a href="#__codelineno-8-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCheckedChanged</span><span class="p">(</span><span class="n">CompoundButton</span><span class="w"> </span><span class="n">buttonView</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isChecked</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><a href="#__codelineno-8-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">        </span><span class="c1">// 实现点击事件</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><a href="#__codelineno-8-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">motion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buttonView</span><span class="p">.</span><span class="na">getText</span><span class="p">().</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><a href="#__codelineno-8-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">isChecked</span><span class="p">){</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><a href="#__codelineno-8-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">hobbys</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">motion</span><span class="p">)){</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><a href="#__codelineno-8-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">                </span><span class="n">hobbys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hobbys</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">motion</span><span class="p">;</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><a href="#__codelineno-8-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><a href="#__codelineno-8-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a><a href="#__codelineno-8-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">        </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a><a href="#__codelineno-8-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">hobbys</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">motion</span><span class="p">)){</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a><a href="#__codelineno-8-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">                </span><span class="n">hobbys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hobbys</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="n">motion</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a><a href="#__codelineno-8-43"><span class="linenos" data-linenos="43 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a><a href="#__codelineno-8-44"><span class="linenos" data-linenos="44 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a><a href="#__codelineno-8-45"><span class="linenos" data-linenos="45 "></span></a><span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">i</span><span class="p">(</span><span class="s">&quot;MainActivity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;您选择的爱好是：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hobbys</span><span class="p">);</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a><a href="#__codelineno-8-46"><span class="linenos" data-linenos="46 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><a href="#__codelineno-8-47"><span class="linenos" data-linenos="47 "></span></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>运行程序。</li>
+</ol>
+<p>点击界面上的复选框，观察日志窗口中输出的日志信息。</p>
+<p>（1）选中”羽毛球“和”篮球“后，日志窗口中打印”您选择的爱好是：羽毛球 篮球“。</p>
+<p>（2）然后取消选择”羽毛球“，日志窗口中打印”您选择的爱好是：篮球“。</p>
+<p><img alt="image-20240306094837077" src="../assets/image-chapter03-013.png" /></p>
+<p><img alt="image-20240306094941059" src="../assets/image-chapter03-014.png" /></p>
+<h3 id="317-toast">3.1.7 Toast类<a class="headerlink" href="#317-toast" title="Permanent link">&para;</a></h3>
+<h4 id="3171">3.1.7.1 使用语法<a class="headerlink" href="#3171" title="Permanent link">&para;</a></h4>
+<p>Toast类是Android中的轻量级消息提醒机制，可用于向用户提示即时消息。</p>
+<blockquote>
+<p>toast本意是烘烤面包的意思，面包机烘烤完成后会发出通知，告知主人已经完成。</p>
+</blockquote>
+<p>使用语法如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1">// Context: 表示应用程序的环境信息，即当前组件的上下文环境。Context是一个抽象类，如果在activity中使用Toast，该参数可设置为“当前Activity.this”。</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><a href="#__codelineno-9-2"><span class="linenos" data-linenos="2 "></span></a><span class="c1">// Text: 提示的文本信息。</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><a href="#__codelineno-9-3"><span class="linenos" data-linenos="3 "></span></a><span class="c1">// Time: 显示信息的时长。可选值有Toast.LENGTH_SHORT和Toast.LENGTH_LONG两种。</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><a href="#__codelineno-9-4"><span class="linenos" data-linenos="4 "></span></a><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">Context</span><span class="p">,</span><span class="w"> </span><span class="n">Text</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="3172">3.1.7.2 使用案例<a class="headerlink" href="#3172" title="Permanent link">&para;</a></h4>
+<p>在CheckBox模块中，使用Toast类提示用户当前选中的所有兴趣爱好。</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><a href="#__codelineno-10-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;您选择的爱好是：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hobbys</span><span class="p">,</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><a href="#__codelineno-10-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">                </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+</code></pre></div>
+<p><img alt="image-20240306102556232" src="../assets/image-chapter03-015.png" /></p>
+<h2 id="32">3.2 列表控件的使用<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<h3 id="321-listview">3.2.1 ListView 控件<a class="headerlink" href="#321-listview" title="Permanent link">&para;</a></h3>
+<h4 id="3211">3.2.1.1 常用属性<a class="headerlink" href="#3211" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>功能描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>android:listSelector</td>
+<td>当条目被点击后，改变条目的背景颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>android:divider</td>
+<td>设置分割线的颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>android:dividerHeight</td>
+<td>设置分割线的高度</td>
+<td></td>
+</tr>
+<tr>
+<td>android:scrollbars</td>
+<td>是否显示滚动条</td>
+<td></td>
+</tr>
+<tr>
+<td>android:fadingEdge</td>
+<td>去掉上边和下边的黑色阴影</td>
+<td></td>
+</tr>
+<tr>
+<td>android:entries</td>
+<td>在res/layout的string.xml中添加的数组资源名称，数组资源使用<code>&lt;string-array&gt;</code>标签定义。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="3212">3.2.1.2 常用数据适配器<a class="headerlink" href="#3212" title="Permanent link">&para;</a></h4>
+<ol>
+<li>BaseAdapter</li>
+</ol>
+<p>BaseAdapter顾名思义是基本的适配器。它实际上是一个抽象类，通常在自定义适配器时会继承BaseAdapter，该类拥有四个抽象方法，根据这几个抽象方法对ListView控件进行数据适配。BaseAdapter中的4个抽象方法如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>功能描述</strong></th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public int getCount()</td>
+<td>获取列表条目的总数</td>
+<td>在进行数据适配时，<strong>必须重写</strong></td>
+</tr>
+<tr>
+<td>public Object getItem(int position)</td>
+<td>根据position（位置）获取某个条目的对象</td>
+<td>可选重写，在某些ListView点击事件中会被用来获取当前条目的数据</td>
+</tr>
+<tr>
+<td>public long getItemId(int position)</td>
+<td>根据position（位置）获取某个条目的id</td>
+<td>可选重写，在某些ListView点击事件中会被用来获取当前条目的id</td>
+</tr>
+<tr>
+<td>public View getView(int position, View  convertView, ViewGroup parent)</td>
+<td>获取相应position对应的条目视图，position是当前条目的位置，convertView用于复用旧视图，parent用于加载XML布局。</td>
+<td>在进行数据适配时，<strong>必须重写</strong></td>
+</tr>
+</tbody>
+</table>
+<p>参考资料：<a href="https://blog.csdn.net/u011494050/article/details/25471007">android中Baseadapter的 getItem 和 getItemId 的作用和重写-CSDN博客</a></p>
+<ol>
+<li>SimpleAdapter</li>
+</ol>
+<p>SimpleAdapter继承BaseAdapter，实现了BaseAdapter的四个抽象方法并进行封装。SimpleAdapter的构造方法的具体信息如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><a href="#__codelineno-11-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">SimpleAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><a href="#__codelineno-11-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">to</span><span class="p">)</span>
+</code></pre></div>
+<p>在SimpleAdapter()构造方法中的5个参数的含义如下：</p>
+<ul>
+<li>context：表示上下文对象。</li>
+<li>data：数据集合，data中的每一项对应ListView控件中的条目的数据。</li>
+<li>resource：条目布局的资源id。</li>
+<li>from：Map集合中的key值。</li>
+<li>to：条目布局中对应的控件。</li>
+</ul>
+<p>参考资料：<a href="https://blog.csdn.net/weixin_49118013/article/details/116900984">SimpleAdapter使用示例-CSDN博客</a></p>
+<ol>
+<li>ArrayAdapter</li>
+</ol>
+<p>ArrayAdapter也是BaseAdapter的子类，用法与SimpleAdapter类似，开发者只需要在构造方法里面传入相应参数即可。ArrayAdapter通常用于适配TextView控件，ArrayAdapter有多个构造方法，构造方法的具体信息如下所示。</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><a href="#__codelineno-12-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">)</span><span class="err">；</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><a href="#__codelineno-12-2"><span class="linenos" data-linenos="2 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">textViewResourceId</span><span class="p">)</span><span class="err">；</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><a href="#__codelineno-12-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">objects</span><span class="p">)</span><span class="err">；</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><a href="#__codelineno-12-4"><span class="linenos" data-linenos="4 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">textViewResourceId</span><span class="p">,</span><span class="n">T</span><span class="o">[]</span><span class="w"> </span><span class="n">objects</span><span class="p">);</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><a href="#__codelineno-12-5"><span class="linenos" data-linenos="5 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">objects</span><span class="p">)</span><span class="err">；</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><a href="#__codelineno-12-6"><span class="linenos" data-linenos="6 "></span></a><span class="kd">public</span><span class="w"> </span><span class="nf">ArrayAdapter</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">textViewResourceId</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">objects</span><span class="p">)</span>
+</code></pre></div>
+<p>​   参考资料：<a href="https://blog.csdn.net/qq_38225558/article/details/79875632">ArrayAdapter使用示例-CSDN博客</a></p>
+<h4 id="3213">3.2.1.3 使用案例<a class="headerlink" href="#3213" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>创建模块 列表控件（listview）</p>
+</li>
+<li>
+<p>导入所需图片到 drawable-hdpi 文件夹中（复制粘贴）。</p>
+</li>
+<li>
+<p>去掉默认标题栏</p>
+</li>
+</ol>
+<p>在 res/values/styles.xml 文件中将应用主题的父主题修改为<code>Theme.AppCompat.Light.NoActionBar</code>。</p>
+<ol>
+<li>放置界面控件</li>
+</ol>
+<p>将res/layout文件夹中activity_main.xml中的布局方式修改为LinearLayout；在该布局文件中放置1个TextView用于显示界面标题，再放置1个ListView用于显示界面中的列表。示例代码如下：</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><a href="#__codelineno-13-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><a href="#__codelineno-13-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="nt">&lt;LinearLayout</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><a href="#__codelineno-13-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><a href="#__codelineno-13-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><a href="#__codelineno-13-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><a href="#__codelineno-13-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="nt">&lt;TextView</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><a href="#__codelineno-13-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><a href="#__codelineno-13-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;45dp&quot;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><a href="#__codelineno-13-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="na">android:text=</span><span class="s">&quot;购物商城&quot;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><a href="#__codelineno-13-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="na">android:textSize=</span><span class="s">&quot;18sp&quot;</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><a href="#__codelineno-13-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="na">android:textColor=</span><span class="s">&quot;#FFFFFF&quot;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><a href="#__codelineno-13-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">        </span><span class="na">android:background=</span><span class="s">&quot;#FF8F03&quot;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><a href="#__codelineno-13-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="na">android:gravity=</span><span class="s">&quot;center&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><a href="#__codelineno-13-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="nt">&lt;ListView</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><a href="#__codelineno-13-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/lv&quot;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><a href="#__codelineno-13-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><a href="#__codelineno-13-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><a href="#__codelineno-13-18"><span class="linenos" data-linenos="18 "></span></a><span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>
+<p>效果图如下：</p>
+<p><img alt="image-chapter03-016" src="../assets/image-chapter03-016.png" /></p>
+<ol>
+<li>创建列表条目界面的布局文件 list_item.xml，在其中放置1个ImageView用于放置商品图片，再放置2个TextView分别用于显示商品名称和描述信息。</li>
+</ol>
+<p>布局文件示例代码如下：</p>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><a href="#__codelineno-14-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><a href="#__codelineno-14-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="nt">&lt;RelativeLayout</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><a href="#__codelineno-14-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><a href="#__codelineno-14-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><a href="#__codelineno-14-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="na">android:padding=</span><span class="s">&quot;10dp&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><a href="#__codelineno-14-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="nt">&lt;ImageView</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><a href="#__codelineno-14-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/iv&quot;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><a href="#__codelineno-14-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;120dp&quot;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><a href="#__codelineno-14-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;90dp&quot;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><a href="#__codelineno-14-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="na">android:src=</span><span class="s">&quot;@drawable/apple&quot;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><a href="#__codelineno-14-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="na">android:layout_centerVertical=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><a href="#__codelineno-14-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="nt">&lt;RelativeLayout</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><a href="#__codelineno-14-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><a href="#__codelineno-14-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;90dp&quot;</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><a href="#__codelineno-14-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="na">android:layout_marginLeft=</span><span class="s">&quot;10dp&quot;</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><a href="#__codelineno-14-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="na">android:layout_toRightOf=</span><span class="s">&quot;@id/iv&quot;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><a href="#__codelineno-14-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="na">android:layout_centerVertical=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><a href="#__codelineno-14-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="nt">&lt;TextView</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><a href="#__codelineno-14-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">            </span><span class="na">android:id=</span><span class="s">&quot;@+id/tv_title&quot;</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><a href="#__codelineno-14-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">            </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><a href="#__codelineno-14-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">            </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><a href="#__codelineno-14-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">            </span><span class="na">android:textSize=</span><span class="s">&quot;20sp&quot;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><a href="#__codelineno-14-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">            </span><span class="na">android:textStyle=</span><span class="s">&quot;bold&quot;</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><a href="#__codelineno-14-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">            </span><span class="na">android:text=</span><span class="s">&quot;苹果&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><a href="#__codelineno-14-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">        </span><span class="nt">&lt;TextView</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><a href="#__codelineno-14-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">            </span><span class="na">android:id=</span><span class="s">&quot;@+id/tv_price_left&quot;</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><a href="#__codelineno-14-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">            </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a><a href="#__codelineno-14-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">            </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a><a href="#__codelineno-14-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">            </span><span class="na">android:textSize=</span><span class="s">&quot;20sp&quot;</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30"></a><a href="#__codelineno-14-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">            </span><span class="na">android:layout_below=</span><span class="s">&quot;@id/tv_title&quot;</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31"></a><a href="#__codelineno-14-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">            </span><span class="na">android:text=</span><span class="s">&quot;价格：&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32"></a><a href="#__codelineno-14-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">        </span><span class="nt">&lt;TextView</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33"></a><a href="#__codelineno-14-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">            </span><span class="na">android:id=</span><span class="s">&quot;@+id/tv_price_right&quot;</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34"></a><a href="#__codelineno-14-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">            </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35"></a><a href="#__codelineno-14-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">            </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36"></a><a href="#__codelineno-14-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">            </span><span class="na">android:textSize=</span><span class="s">&quot;20sp&quot;</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37"></a><a href="#__codelineno-14-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">            </span><span class="na">android:layout_below=</span><span class="s">&quot;@id/tv_title&quot;</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a><a href="#__codelineno-14-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">            </span><span class="na">android:layout_toRightOf=</span><span class="s">&quot;@id/tv_price_left&quot;</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a><a href="#__codelineno-14-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">            </span><span class="na">android:text=</span><span class="s">&quot;1000元&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40"></a><a href="#__codelineno-14-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">    </span><span class="nt">&lt;/RelativeLayout&gt;</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41"></a><a href="#__codelineno-14-41"><span class="linenos" data-linenos="41 "></span></a><span class="nt">&lt;/RelativeLayout&gt;</span>
+</code></pre></div>
+<p>效果图如下：</p>
+<p><img alt="" src="../assets/image-chapter03-017.png" /></p>
+<ol>
+<li>在 Activity 中实现购物商城的显示效果。</li>
+</ol>
+<p>在MainActivity.java中创建一个继承自BaseAdapter类的适配器，并在该类中实现对ListView控件的数据适配。示例代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><a href="#__codelineno-15-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">package</span><span class="w"> </span><span class="nn">cn.itcast.listview</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><a href="#__codelineno-15-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><a href="#__codelineno-15-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.app.Activity</span><span class="p">;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><a href="#__codelineno-15-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><a href="#__codelineno-15-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.View</span><span class="p">;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><a href="#__codelineno-15-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.ViewGroup</span><span class="p">;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><a href="#__codelineno-15-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.BaseAdapter</span><span class="p">;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><a href="#__codelineno-15-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.ImageView</span><span class="p">;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><a href="#__codelineno-15-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.ListView</span><span class="p">;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><a href="#__codelineno-15-10"><span class="linenos" data-linenos="10 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.TextView</span><span class="p">;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><a href="#__codelineno-15-11"><span class="linenos" data-linenos="11 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><a href="#__codelineno-15-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="c1">//商品名称与价格数据集合</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><a href="#__codelineno-15-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">titles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;桌子&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;苹果&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;蛋糕&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;线衣&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;猕猴桃&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;围巾&quot;</span><span class="p">};</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><a href="#__codelineno-15-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">prices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;1800元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;10元/kg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;300元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;350元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;10元/kg&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><a href="#__codelineno-15-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">            </span><span class="s">&quot;280元&quot;</span><span class="p">};</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><a href="#__codelineno-15-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="c1">//图片数据集合</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><a href="#__codelineno-15-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">table</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">apple</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">cake</span><span class="p">,</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><a href="#__codelineno-15-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">            </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">wireclothes</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">kiwifruit</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">scarf</span><span class="p">};</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><a href="#__codelineno-15-19"><span class="linenos" data-linenos="19 "></span></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><a href="#__codelineno-15-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><a href="#__codelineno-15-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><a href="#__codelineno-15-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><a href="#__codelineno-15-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">        </span><span class="n">ListView</span><span class="w"> </span><span class="n">mListView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">lv</span><span class="p">);</span><span class="w"> </span><span class="c1">//初始化ListView控件</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><a href="#__codelineno-15-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">        </span><span class="n">MyBaseAdapter</span><span class="w"> </span><span class="n">mAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyBaseAdapter</span><span class="p">();</span><span class="w"> </span><span class="c1">//创建一个Adapter的实例</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><a href="#__codelineno-15-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">        </span><span class="n">mListView</span><span class="p">.</span><span class="na">setAdapter</span><span class="p">(</span><span class="n">mAdapter</span><span class="p">);</span><span class="w">                  </span><span class="c1">//设置Adapter</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><a href="#__codelineno-15-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><a href="#__codelineno-15-27"><span class="linenos" data-linenos="27 "></span></a>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><a href="#__codelineno-15-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="kd">class</span> <span class="nc">MyBaseAdapter</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseAdapter</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29"></a><a href="#__codelineno-15-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30"></a><a href="#__codelineno-15-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">//获取条目的总数</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31"></a><a href="#__codelineno-15-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">titles</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="c1">//返回条目的总数</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32"></a><a href="#__codelineno-15-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33"></a><a href="#__codelineno-15-33"><span class="linenos" data-linenos="33 "></span></a>
+<a id="__codelineno-15-34" name="__codelineno-15-34"></a><a href="#__codelineno-15-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35"></a><a href="#__codelineno-15-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="nf">getItem</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36"></a><a href="#__codelineno-15-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">//返回条目的数据对象</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37"></a><a href="#__codelineno-15-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38"></a><a href="#__codelineno-15-38"><span class="linenos" data-linenos="38 "></span></a>
+<a id="__codelineno-15-39" name="__codelineno-15-39"></a><a href="#__codelineno-15-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40"></a><a href="#__codelineno-15-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">getItemId</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41"></a><a href="#__codelineno-15-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//返回条目的Id</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42"></a><a href="#__codelineno-15-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43"></a><a href="#__codelineno-15-43"><span class="linenos" data-linenos="43 "></span></a><span class="w">        </span><span class="c1">//获取条目的视图</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44"></a><a href="#__codelineno-15-44"><span class="linenos" data-linenos="44 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45"></a><a href="#__codelineno-15-45"><span class="linenos" data-linenos="45 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="nf">getView</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="n">convertView</span><span class="p">,</span><span class="w"> </span><span class="n">ViewGroup</span><span class="w"> </span><span class="n">parent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46"></a><a href="#__codelineno-15-46"><span class="linenos" data-linenos="46 "></span></a><span class="w">            </span><span class="c1">// 加载 list_item.xml 布局文件</span>
+<a id="__codelineno-15-47" name="__codelineno-15-47"></a><a href="#__codelineno-15-47"><span class="linenos" data-linenos="47 "></span></a><span class="w">            </span><span class="n">View</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">inflate</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">list_item</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-15-48" name="__codelineno-15-48"></a><a href="#__codelineno-15-48"><span class="linenos" data-linenos="48 "></span></a><span class="w">            </span><span class="c1">// 获取列表条条目布局中的控件</span>
+<a id="__codelineno-15-49" name="__codelineno-15-49"></a><a href="#__codelineno-15-49"><span class="linenos" data-linenos="49 "></span></a><span class="w">            </span><span class="n">ImageView</span><span class="w"> </span><span class="n">iv_icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">view</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">iv</span><span class="p">);</span>
+<a id="__codelineno-15-50" name="__codelineno-15-50"></a><a href="#__codelineno-15-50"><span class="linenos" data-linenos="50 "></span></a><span class="w">            </span><span class="n">TextView</span><span class="w"> </span><span class="n">tv_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">view</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_title</span><span class="p">);</span>
+<a id="__codelineno-15-51" name="__codelineno-15-51"></a><a href="#__codelineno-15-51"><span class="linenos" data-linenos="51 "></span></a><span class="w">            </span><span class="n">TextView</span><span class="w"> </span><span class="n">tv_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">view</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_price_right</span><span class="p">);</span>
+<a id="__codelineno-15-52" name="__codelineno-15-52"></a><a href="#__codelineno-15-52"><span class="linenos" data-linenos="52 "></span></a><span class="w">            </span><span class="c1">// 设置控件内容</span>
+<a id="__codelineno-15-53" name="__codelineno-15-53"></a><a href="#__codelineno-15-53"><span class="linenos" data-linenos="53 "></span></a><span class="w">            </span><span class="n">iv_icon</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">icons</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-15-54" name="__codelineno-15-54"></a><a href="#__codelineno-15-54"><span class="linenos" data-linenos="54 "></span></a><span class="w">            </span><span class="n">tv_title</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">titles</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-15-55" name="__codelineno-15-55"></a><a href="#__codelineno-15-55"><span class="linenos" data-linenos="55 "></span></a><span class="w">            </span><span class="n">tv_price</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">prices</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-15-56" name="__codelineno-15-56"></a><a href="#__codelineno-15-56"><span class="linenos" data-linenos="56 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">view</span><span class="p">;</span>
+<a id="__codelineno-15-57" name="__codelineno-15-57"></a><a href="#__codelineno-15-57"><span class="linenos" data-linenos="57 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-58" name="__codelineno-15-58"></a><a href="#__codelineno-15-58"><span class="linenos" data-linenos="58 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-59" name="__codelineno-15-59"></a><a href="#__codelineno-15-59"><span class="linenos" data-linenos="59 "></span></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>运行程序。</li>
+</ol>
+<p><img alt="image-chapter03-018" src="../assets/image-chapter03-018.png" /></p>
+<h4 id="3214-listview">3.2.1.4 优化ListView<a class="headerlink" href="#3214-listview" title="Permanent link">&para;</a></h4>
+<p>当ListView中加载的Item过多，并快速滑动列表控件时，会出现界面卡顿的现象。出现这种问题的原因是，在滑动屏幕时，getView()方法中的存在以下两个问题：（1）不断创建Item对象；（2）不断执行findViewById()方法初始化控件。</p>
+<p>优化方法：使用ViewHolder类缓存控件实例。</p>
+<p>优化getView()方法的具体代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><a href="#__codelineno-16-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><a href="#__codelineno-16-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><a href="#__codelineno-16-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="c1">// ...</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><a href="#__codelineno-16-4"><span class="linenos" data-linenos=" 4 "></span></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><a href="#__codelineno-16-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="kd">class</span> <span class="nc">MyAdapter</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseAdapter</span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><a href="#__codelineno-16-6"><span class="linenos" data-linenos=" 6 "></span></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><a href="#__codelineno-16-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="c1">// ...</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><a href="#__codelineno-16-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><a href="#__codelineno-16-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><a href="#__codelineno-16-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="nf">getView</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="n">convertView</span><span class="p">,</span><span class="w"> </span><span class="n">ViewGroup</span><span class="w"> </span><span class="n">parent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><a href="#__codelineno-16-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">            </span><span class="n">ViewHolder</span><span class="w"> </span><span class="n">holder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><a href="#__codelineno-16-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">            </span><span class="c1">// 判断滑出屏幕的Item对象是否为空</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><a href="#__codelineno-16-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">convertView</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">){</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><a href="#__codelineno-16-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">                </span><span class="c1">// 将list_item.xml文件加载为view对象</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><a href="#__codelineno-16-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">                </span><span class="n">convertView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="na">inflate</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">list_item</span><span class="p">,</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><a href="#__codelineno-16-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">                        </span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><a href="#__codelineno-16-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">                </span><span class="c1">// 获取列表条目布局界面中的控件</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><a href="#__codelineno-16-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">                </span><span class="n">holder</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="n">ViewHolder</span><span class="p">();</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><a href="#__codelineno-16-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">                </span><span class="n">holder</span><span class="p">.</span><span class="na">iv_icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">convertView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">iv</span><span class="p">);</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><a href="#__codelineno-16-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">                </span><span class="n">holder</span><span class="p">.</span><span class="na">tv_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">convertView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_title</span><span class="p">);</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><a href="#__codelineno-16-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">                </span><span class="n">holder</span><span class="p">.</span><span class="na">tv_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">convertView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_price_right</span><span class="p">);</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><a href="#__codelineno-16-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">                </span><span class="c1">// 将holder对象缓存到convertView中</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><a href="#__codelineno-16-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">                </span><span class="n">convertView</span><span class="p">.</span><span class="na">setTag</span><span class="p">(</span><span class="n">holder</span><span class="p">);</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><a href="#__codelineno-16-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><a href="#__codelineno-16-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">            </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><a href="#__codelineno-16-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">                </span><span class="c1">// 从convertView中获取缓存的holder对象</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><a href="#__codelineno-16-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">                </span><span class="n">holder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ViewHolder</span><span class="p">)</span><span class="w"> </span><span class="n">convertView</span><span class="p">.</span><span class="na">getTag</span><span class="p">();</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><a href="#__codelineno-16-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a><a href="#__codelineno-16-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">            </span><span class="c1">// 设置列表布局界面中控件的内容</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a><a href="#__codelineno-16-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">            </span><span class="n">holder</span><span class="p">.</span><span class="na">iv_icon</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">icons</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a><a href="#__codelineno-16-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">            </span><span class="n">holder</span><span class="p">.</span><span class="na">tv_title</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">titles</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a><a href="#__codelineno-16-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">            </span><span class="n">holder</span><span class="p">.</span><span class="na">tv_price</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">prices</span><span class="o">[</span><span class="n">position</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a><a href="#__codelineno-16-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">convertView</span><span class="p">;</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a><a href="#__codelineno-16-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a><a href="#__codelineno-16-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a><a href="#__codelineno-16-36"><span class="linenos" data-linenos="36 "></span></a>
+<a id="__codelineno-16-37" name="__codelineno-16-37"></a><a href="#__codelineno-16-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="c1">// 创建ViewHolder类，放置需要加载的控件变量</span>
+<a id="__codelineno-16-38" name="__codelineno-16-38"></a><a href="#__codelineno-16-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">    </span><span class="kd">class</span> <span class="nc">ViewHolder</span><span class="p">{</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39"></a><a href="#__codelineno-16-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">        </span><span class="n">TextView</span><span class="w"> </span><span class="n">tv_title</span><span class="p">,</span><span class="w"> </span><span class="n">tv_price</span><span class="p">;</span>
+<a id="__codelineno-16-40" name="__codelineno-16-40"></a><a href="#__codelineno-16-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">        </span><span class="n">ImageView</span><span class="w"> </span><span class="n">iv_icon</span><span class="p">;</span>
+<a id="__codelineno-16-41" name="__codelineno-16-41"></a><a href="#__codelineno-16-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-42" name="__codelineno-16-42"></a><a href="#__codelineno-16-42"><span class="linenos" data-linenos="42 "></span></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="322-recyclerview">3.2.2 RecyclerView控件<a class="headerlink" href="#322-recyclerview" title="Permanent link">&para;</a></h3>
+<p>在Android 5.0后，Google公司提供一个功能更加强大的列表控件：RecyclerView。</p>
+<h4 id="3221">3.2.2.1 控件功能<a class="headerlink" href="#3221" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>RecyclerView控件</th>
+<th>ListView控件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>展示效果</td>
+<td>实现横向或竖向的列表效果、瀑布流效果和GridView效果</td>
+<td>只能实现竖直的列表效果</td>
+</tr>
+<tr>
+<td>数据适配器</td>
+<td>使用RecyclerView.Adapter适配器；强制使用ViewHolder类</td>
+<td></td>
+</tr>
+<tr>
+<td>复用效果</td>
+<td>复用Item对象的工作由控件实现</td>
+<td>开发者通过convertView的setTag()和getTag()方法实现</td>
+</tr>
+<tr>
+<td>动画效果</td>
+<td>通过setItemAnimator()方法为Item添加动画效果</td>
+<td>没有setItemAnimator()方法</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3222">3.2.2.2 使用示例<a class="headerlink" href="#3222" title="Permanent link">&para;</a></h4>
+<ol>
+<li>新建模块 RecyclerView，在该模块的build.gradle文件的dependencies{}节点中添加recyclerview-v7库。</li>
+</ol>
+<p><strong>注意：添加的recyclerview-v7库的版本需要与com.android.support:appcompat库的版本一致。</strong></p>
+<p><img alt="image-20240311153036237" src="../assets/image-chapter03-019.png" /></p>
+<ol>
+<li>
+<p>复制 listview 模块中的图片和列表条目布局文件到该模块中。</p>
+</li>
+<li>
+<p>新建布局文件 shopping_rv.xml，并在其中添加1个RecyclerView控件。示例代码如下：</p>
+</li>
+</ol>
+<div class="language-xml highlight"><span class="filename">XML</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><a href="#__codelineno-17-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><a href="#__codelineno-17-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="nt">&lt;LinearLayout</span><span class="w"> </span><span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><a href="#__codelineno-17-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><a href="#__codelineno-17-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><a href="#__codelineno-17-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><a href="#__codelineno-17-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="nt">&lt;android.support.v7.widget.RecyclerView</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><a href="#__codelineno-17-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="na">android:id=</span><span class="s">&quot;@+id/id_rv&quot;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><a href="#__codelineno-17-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><a href="#__codelineno-17-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span><span class="w">        </span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><a href="#__codelineno-17-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="nt">&lt;/android.support.v7.widget.RecyclerView&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><a href="#__codelineno-17-11"><span class="linenos" data-linenos="11 "></span></a>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><a href="#__codelineno-17-12"><span class="linenos" data-linenos="12 "></span></a><span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>
+<p>预览效果图如下：</p>
+<p><img alt="image-20240311153904968" src="../assets/image-chapter03-020.png" /></p>
+<ol>
+<li>在MainActivity中实现商品列表界面的显示效果。</li>
+</ol>
+<p>（1）从listview模块中复制列表数据；</p>
+<p>（2）创建数据适配器类继承RecyclerView.Adapter。先在该类中创建内部类MyViewHolder，再重写RecyclerView.Adapter中的三个方法。</p>
+<p>示例代码如下：</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><a href="#__codelineno-18-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">package</span><span class="w"> </span><span class="nn">cn.itcast.recyclerview</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><a href="#__codelineno-18-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><a href="#__codelineno-18-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.annotation.NonNull</span><span class="p">;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><a href="#__codelineno-18-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.app.AppCompatActivity</span><span class="p">;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><a href="#__codelineno-18-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><a href="#__codelineno-18-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.widget.LinearLayoutManager</span><span class="p">;</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><a href="#__codelineno-18-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.widget.RecyclerView</span><span class="p">;</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><a href="#__codelineno-18-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.LayoutInflater</span><span class="p">;</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><a href="#__codelineno-18-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.View</span><span class="p">;</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><a href="#__codelineno-18-10"><span class="linenos" data-linenos="10 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.view.ViewGroup</span><span class="p">;</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><a href="#__codelineno-18-11"><span class="linenos" data-linenos="11 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.ImageView</span><span class="p">;</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><a href="#__codelineno-18-12"><span class="linenos" data-linenos="12 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.LinearLayout</span><span class="p">;</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><a href="#__codelineno-18-13"><span class="linenos" data-linenos="13 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">android.widget.TextView</span><span class="p">;</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><a href="#__codelineno-18-14"><span class="linenos" data-linenos="14 "></span></a>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><a href="#__codelineno-18-15"><span class="linenos" data-linenos="15 "></span></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a><a href="#__codelineno-18-16"><span class="linenos" data-linenos="16 "></span></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a><a href="#__codelineno-18-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">titles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;桌子&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;苹果&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;蛋糕&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;线衣&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;猕猴桃&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;围巾&quot;</span><span class="p">};</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a><a href="#__codelineno-18-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">prices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;1800元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;10元/kg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;300元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;350元&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;10元/kg&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;280元&quot;</span><span class="p">};</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><a href="#__codelineno-18-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">table</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">apple</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">cake</span><span class="p">,</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a><a href="#__codelineno-18-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">            </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">wireclothes</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">kiwifruit</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">scarf</span><span class="p">};</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><a href="#__codelineno-18-21"><span class="linenos" data-linenos="21 "></span></a>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a><a href="#__codelineno-18-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a><a href="#__codelineno-18-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a><a href="#__codelineno-18-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a><a href="#__codelineno-18-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">shopping_rv</span><span class="p">);</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a><a href="#__codelineno-18-26"><span class="linenos" data-linenos="26 "></span></a>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a><a href="#__codelineno-18-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">        </span><span class="c1">// 获取RecyclerView控件</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a><a href="#__codelineno-18-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">        </span><span class="n">RecyclerView</span><span class="w"> </span><span class="n">recyclerView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">id_rv</span><span class="p">);</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a><a href="#__codelineno-18-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">        </span><span class="c1">// 设置RecyclerView控件的显示方式为线性垂直</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a><a href="#__codelineno-18-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">        </span><span class="n">recyclerView</span><span class="p">.</span><span class="na">setLayoutManager</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">LinearLayoutManager</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a><a href="#__codelineno-18-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">        </span><span class="c1">// 设置数据适配器</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a><a href="#__codelineno-18-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">        </span><span class="n">HomeAdapter</span><span class="w"> </span><span class="n">homeAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HomeAdapter</span><span class="p">();</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33"></a><a href="#__codelineno-18-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">        </span><span class="n">recyclerView</span><span class="p">.</span><span class="na">setAdapter</span><span class="p">(</span><span class="n">homeAdapter</span><span class="p">);</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34"></a><a href="#__codelineno-18-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35"></a><a href="#__codelineno-18-35"><span class="linenos" data-linenos="35 "></span></a>
+<a id="__codelineno-18-36" name="__codelineno-18-36"></a><a href="#__codelineno-18-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="c1">// 创建数据适配器</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37"></a><a href="#__codelineno-18-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="kd">class</span> <span class="nc">HomeAdapter</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RecyclerView</span><span class="p">.</span><span class="na">Adapter</span><span class="o">&lt;</span><span class="n">HomeAdapter</span><span class="p">.</span><span class="na">MyViewHolder</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-18-38" name="__codelineno-18-38"></a><a href="#__codelineno-18-38"><span class="linenos" data-linenos="38 "></span></a>
+<a id="__codelineno-18-39" name="__codelineno-18-39"></a><a href="#__codelineno-18-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">        </span><span class="nd">@NonNull</span>
+<a id="__codelineno-18-40" name="__codelineno-18-40"></a><a href="#__codelineno-18-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-18-41" name="__codelineno-18-41"></a><a href="#__codelineno-18-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">MyViewHolder</span><span class="w"> </span><span class="nf">onCreateViewHolder</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">ViewGroup</span><span class="w"> </span><span class="n">viewGroup</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-42" name="__codelineno-18-42"></a><a href="#__codelineno-18-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">            </span><span class="c1">// 加载Item界面的布局文件，并返回MyViewHolder类的对象</span>
+<a id="__codelineno-18-43" name="__codelineno-18-43"></a><a href="#__codelineno-18-43"><span class="linenos" data-linenos="43 "></span></a><span class="w">            </span><span class="n">MyViewHolder</span><span class="w"> </span><span class="n">holder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyViewHolder</span><span class="p">(</span><span class="n">LayoutInflater</span><span class="p">.</span><span class="na">from</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="na">this</span><span class="p">).</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44"></a><a href="#__codelineno-18-44"><span class="linenos" data-linenos="44 "></span></a><span class="w">                    </span><span class="n">inflate</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">list_item</span><span class="p">,</span><span class="w"> </span><span class="n">viewGroup</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
+<a id="__codelineno-18-45" name="__codelineno-18-45"></a><a href="#__codelineno-18-45"><span class="linenos" data-linenos="45 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">holder</span><span class="p">;</span>
+<a id="__codelineno-18-46" name="__codelineno-18-46"></a><a href="#__codelineno-18-46"><span class="linenos" data-linenos="46 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-47" name="__codelineno-18-47"></a><a href="#__codelineno-18-47"><span class="linenos" data-linenos="47 "></span></a>
+<a id="__codelineno-18-48" name="__codelineno-18-48"></a><a href="#__codelineno-18-48"><span class="linenos" data-linenos="48 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-18-49" name="__codelineno-18-49"></a><a href="#__codelineno-18-49"><span class="linenos" data-linenos="49 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onBindViewHolder</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">MyViewHolder</span><span class="w"> </span><span class="n">myViewHolder</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-50" name="__codelineno-18-50"></a><a href="#__codelineno-18-50"><span class="linenos" data-linenos="50 "></span></a><span class="w">            </span><span class="c1">// 将获取的数据设置到对应的控件上</span>
+<a id="__codelineno-18-51" name="__codelineno-18-51"></a><a href="#__codelineno-18-51"><span class="linenos" data-linenos="51 "></span></a><span class="w">            </span><span class="n">myViewHolder</span><span class="p">.</span><span class="na">tv_title</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">titles</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-18-52" name="__codelineno-18-52"></a><a href="#__codelineno-18-52"><span class="linenos" data-linenos="52 "></span></a><span class="w">            </span><span class="n">myViewHolder</span><span class="p">.</span><span class="na">tv_price</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-18-53" name="__codelineno-18-53"></a><a href="#__codelineno-18-53"><span class="linenos" data-linenos="53 "></span></a><span class="w">            </span><span class="n">myViewHolder</span><span class="p">.</span><span class="na">iv_icon</span><span class="p">.</span><span class="na">setImageResource</span><span class="p">(</span><span class="n">icons</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-18-54" name="__codelineno-18-54"></a><a href="#__codelineno-18-54"><span class="linenos" data-linenos="54 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-55" name="__codelineno-18-55"></a><a href="#__codelineno-18-55"><span class="linenos" data-linenos="55 "></span></a>
+<a id="__codelineno-18-56" name="__codelineno-18-56"></a><a href="#__codelineno-18-56"><span class="linenos" data-linenos="56 "></span></a><span class="w">        </span><span class="nd">@Override</span>
+<a id="__codelineno-18-57" name="__codelineno-18-57"></a><a href="#__codelineno-18-57"><span class="linenos" data-linenos="57 "></span></a><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getItemCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-58" name="__codelineno-18-58"></a><a href="#__codelineno-18-58"><span class="linenos" data-linenos="58 "></span></a><span class="w">            </span><span class="c1">// 获取列表条目总数</span>
+<a id="__codelineno-18-59" name="__codelineno-18-59"></a><a href="#__codelineno-18-59"><span class="linenos" data-linenos="59 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">titles</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-18-60" name="__codelineno-18-60"></a><a href="#__codelineno-18-60"><span class="linenos" data-linenos="60 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-61" name="__codelineno-18-61"></a><a href="#__codelineno-18-61"><span class="linenos" data-linenos="61 "></span></a>
+<a id="__codelineno-18-62" name="__codelineno-18-62"></a><a href="#__codelineno-18-62"><span class="linenos" data-linenos="62 "></span></a><span class="w">        </span><span class="c1">// 创建一个MyViewHolder类继承RecyclerView.ViewHolder类，在该类中获取界面上的控件</span>
+<a id="__codelineno-18-63" name="__codelineno-18-63"></a><a href="#__codelineno-18-63"><span class="linenos" data-linenos="63 "></span></a><span class="w">        </span><span class="kd">class</span> <span class="nc">MyViewHolder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RecyclerView</span><span class="p">.</span><span class="na">ViewHolder</span><span class="p">{</span>
+<a id="__codelineno-18-64" name="__codelineno-18-64"></a><a href="#__codelineno-18-64"><span class="linenos" data-linenos="64 "></span></a>
+<a id="__codelineno-18-65" name="__codelineno-18-65"></a><a href="#__codelineno-18-65"><span class="linenos" data-linenos="65 "></span></a><span class="w">            </span><span class="n">TextView</span><span class="w"> </span><span class="n">tv_title</span><span class="p">,</span><span class="w"> </span><span class="n">tv_price</span><span class="p">;</span>
+<a id="__codelineno-18-66" name="__codelineno-18-66"></a><a href="#__codelineno-18-66"><span class="linenos" data-linenos="66 "></span></a><span class="w">            </span><span class="n">ImageView</span><span class="w"> </span><span class="n">iv_icon</span><span class="p">;</span>
+<a id="__codelineno-18-67" name="__codelineno-18-67"></a><a href="#__codelineno-18-67"><span class="linenos" data-linenos="67 "></span></a>
+<a id="__codelineno-18-68" name="__codelineno-18-68"></a><a href="#__codelineno-18-68"><span class="linenos" data-linenos="68 "></span></a><span class="w">            </span><span class="n">MyViewHolder</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="n">itemView</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-69" name="__codelineno-18-69"></a><a href="#__codelineno-18-69"><span class="linenos" data-linenos="69 "></span></a><span class="w">                </span><span class="kd">super</span><span class="p">(</span><span class="n">itemView</span><span class="p">);</span>
+<a id="__codelineno-18-70" name="__codelineno-18-70"></a><a href="#__codelineno-18-70"><span class="linenos" data-linenos="70 "></span></a><span class="w">                </span><span class="n">tv_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_name</span><span class="p">);</span>
+<a id="__codelineno-18-71" name="__codelineno-18-71"></a><a href="#__codelineno-18-71"><span class="linenos" data-linenos="71 "></span></a><span class="w">                </span><span class="n">tv_price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">tv_price_right</span><span class="p">);</span>
+<a id="__codelineno-18-72" name="__codelineno-18-72"></a><a href="#__codelineno-18-72"><span class="linenos" data-linenos="72 "></span></a><span class="w">                </span><span class="n">iv_icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">itemView</span><span class="p">.</span><span class="na">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">id_rv</span><span class="p">);</span>
+<a id="__codelineno-18-73" name="__codelineno-18-73"></a><a href="#__codelineno-18-73"><span class="linenos" data-linenos="73 "></span></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-18-74" name="__codelineno-18-74"></a><a href="#__codelineno-18-74"><span class="linenos" data-linenos="74 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-18-75" name="__codelineno-18-75"></a><a href="#__codelineno-18-75"><span class="linenos" data-linenos="75 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-76" name="__codelineno-18-76"></a><a href="#__codelineno-18-76"><span class="linenos" data-linenos="76 "></span></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>运行程序。</li>
+</ol>
+<p><img alt="image-20240311161924080" src="../assets/image-chapter03-021.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../%E7%AC%AC2%E7%AB%A0%20Android%E5%B8%B8%E8%A7%81%E7%95%8C%E9%9D%A2%E5%B8%83%E5%B1%80/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第2章 Android常见界面布局">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第2章 Android常见界面布局
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E7%AC%AC4%E7%AB%A0%20%E7%A8%8B%E5%BA%8F%E6%B4%BB%E5%8A%A8%E5%8D%95%E5%85%83Activity/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第4章 程序活动单元Activity">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第4章 程序活动单元Activity
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+    
+  </body>
+</html>
